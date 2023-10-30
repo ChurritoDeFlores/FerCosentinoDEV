@@ -1,0 +1,23 @@
+Instalacion de Reflex
+- Crear un directorio donde se guardara el proyecto
+- Crear un entorno virtual
+    > python -m venv venv
+- Activamos el entorno virtual
+    > /venv/Scripts/activate
+- Instalar Reflex
+    > pip install Reflex
+- Iniciar el proyecto
+    > reflex init
+- Podemos abrir el proyecto con VS Code
+    > code .
+- Directorios y usos:
+    .web :  se encuentran todos los archivos del proyecto
+            compilado
+    /assets : todos los recursos estaticos como iconos, imagenes,
+              fuentes, audios etc.
+    /Proyecto :  carpeta que contiene el proyecto
+    .gitignore : archivo de github que no permite subir archivos
+                que determino en el
+    rxconfig.py : archivo de configuracion
+- Para correr el Proyecto
+    en (venv): > reflex run
