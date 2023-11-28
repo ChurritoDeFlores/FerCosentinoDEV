@@ -4,6 +4,7 @@ import { Event, getAllLocalStorageItems, getRefValue, getRefValues, isTrue, prev
 import { EventLoopContext, initialEvents, StateContext } from "/utils/context.js"
 import "focus-visible/dist/focus-visible"
 import { Avatar, Box, Button, Card, CardBody, Center, HStack, Image, Link, ListItem, Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay, Spacer, Text, UnorderedList, useColorMode, VStack } from "@chakra-ui/react"
+import Script from "next/script"
 import { DownloadIcon } from "@chakra-ui/icons"
 import NextLink from "next/link"
 import { Prism } from "react-syntax-highlighter"
@@ -66,6 +67,9 @@ export default function Component() {
 )}
 </Fragment>
   <VStack>
+  <Script strategy={`afterInteractive`}>
+  {`document.documentElement.lang='en'`}
+</Script>
   <HStack sx={{"bg": "#00081B", "position": "fixed", "width": "100%", "top": "0px", "zIndex": "5"}}>
   <Image src={`favicon.ico`} sx={{"height": "90px", "marginRight": "1%", "marginLeft": "2%"}}/>
   <Text sx={{"fontSize": "2.3em", "_as": "b", "color": "#F1622B", "marginRight": "auto", "marginLeft": "2%", "width": "81%"}}>

@@ -12,6 +12,7 @@ from FerCosentinoDEV.Styles.styles import LINE_TOP_STYLE
 
 def index() -> rx.Component:
     return  rx.vstack(
+                rx.script("document.documentElement.lang='en'"),
                 navbar(),
                 rx.box(style=LINE_TOP_STYLE),
                 rx.hstack(
