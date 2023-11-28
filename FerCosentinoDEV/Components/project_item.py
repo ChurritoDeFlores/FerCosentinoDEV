@@ -1,66 +1,39 @@
 import reflex as rx
 from FerCosentinoDEV.Styles.colors import Color
-from FerCosentinoDEV.Styles.styles import Size
-from FerCosentinoDEV.Styles.fonts import Font_Size
+from FerCosentinoDEV.Styles.styles import Size, RUN_BUTTON_PROJECT_STYLE,IMG_BUTTON_PROJECT_STYLE
+from FerCosentinoDEV.Styles.styles import TITLE_PROJECT_STYLE, DESCRIPTION_PROJECT_STYLE, IMG_PROJECT_STYLE
+from FerCosentinoDEV.Styles.styles import URL_TEXT_POJECT_STYLE, URL_POJECT_STYLE, LENGUAGES_PROJECT_STYLES
 import FerCosentinoDEV.constants as Const
 
 
 def project_item(project: Const.Project) -> rx.Component():
     return  rx.card(
                 rx.vstack(
-                    rx.hstack(
-                        rx.text(
+                    rx.hstack(# HEADER_PROJECT
+                        rx.text( # TITTLE_PROJECT
                             project.title,
-                            color=Color.PRIMARY.value,
-                            font_size="1.5em",
-                            as_="b",
-                            margin_right="auto",
-                            margin_left="2%"
+                            style = TITLE_PROJECT_STYLE
                         ),
-                        rx.link(
-                            rx.image(
+                        rx.link( ## RUN_BOTTON_PROJECT
+                            rx.image( #IMG_PROJECT
                                 src="play_button.svg",
-                                width=Size.DEFAULT.value,
-                                height=Size.DEFAULT.value,
-                                margin_y=Size.SMALL.value,
-                                margin_right=Size.SMALL.value
+                                style = IMG_BUTTON_PROJECT_STYLE,
                             ),
-                            "Run",
-                            href= project.url_app, #error, no funciona el boton
-                            display='flex',
-                            align_items= 'center',
-                            color=Color.BACKGROUND.value,
-                            font_size=Font_Size.LARGE.value,
-                            as_='b',
-                            button = True,
-                            is_external=True,    
-                            bg=Color.PRIMARY.value,
-                            padding_x= Size.DEFAULT.value,
-                            border_radius= Size.SMALL.value,
-                            margin_right="5%",
-                            margin_left="0%",
-                            _hover={
-                                    "bg": Color.CONTENT.value,
-                                    "border_color": Color.SECONDARY.value,
-                                    "text_color": Color.PRIMARY.value,
-                                    }
+                            rx.text("Run"),
+                            href= project.url_app,
+                            style=RUN_BUTTON_PROJECT_STYLE,
+                            is_external = True,
                         ),
                         width="100%"
                     ),
                     rx.hstack(
                         rx.text(
                             project.description,
-                            color=Color.SECONDARY.value,
-                            font_size="1.1em",
-                            margin_right="auto",
-                            margin_left="2%"
+                            style=DESCRIPTION_PROJECT_STYLE
                         ),
                         rx.image(
                             src=project.url_image,
-                            max_width="50%",
-                            max_height="180px",
-                            margin_right="5%",
-                            margin_left="0%"
+                            style=IMG_PROJECT_STYLE
                         ),
                         width="100%",
                         margin_top=Size.LARGE.value
@@ -69,18 +42,18 @@ def project_item(project: Const.Project) -> rx.Component():
                         rx.link(
                             rx.text(
                                 project.url_github,
-                                color=Color.SECONDARY.value,
-                                font_size="1em",
-                                as_="i"
+                                style = URL_TEXT_POJECT_STYLE
                             ),
                             href=project.url_github,
+                            style = URL_POJECT_STYLE,
                             button=True,
                             is_external=True,
-                            margin_right="auto",
-                            margin_left="2%"
                         )
                         ,
-                        rx.text(project.languages_used, color=Color.SECONDARY.value, font_size="1em", as_="i", margin_right="5%",margin_left="0%"),
+                        rx.text(
+                            project.languages_used,
+                            style = LENGUAGES_PROJECT_STYLES
+                        ),
                         width="100%"
                     )
                 ),

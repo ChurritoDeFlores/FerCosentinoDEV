@@ -4,9 +4,9 @@ from FerCosentinoDEV.Models.Project import Project
 
 
 # URL redes sociales y contacto
-URL_GITHUB="https://github.com/ChurritoDeFlores"
-URL_INSTAGRAM = "https://www.linkedin.com/in/feracosentino/"
-URL_LINKEDIN = "https://www.instagram.com/fernan.cosent/"
+URL_GITHUB="https://github.com/Dingras"
+URL_INSTAGRAM = "https://www.instagram.com/fernan.cosent/"
+URL_LINKEDIN = "https://www.linkedin.com/in/feracosentino/"
 
 
 # Informacion personal
@@ -45,9 +45,9 @@ EDU_ANALISTA_DE_SISTEMAS = AcademicExperience('Instituto Argentino de la empresa
 
 # Proyectos
 
-PROJECT_API_PYTODO =Project("PyToDo API", "swagger_ui.png", "API for user diary created with FastAPI", "https://github.com/ChurritoDeFlores/PyToDo", "Python")
-PROJECT_APP_PYTODO = Project("PyToDo APP", "PyToDoAPP.png", "APP for user diary created with React", "https://github.com/ChurritoDeFlores/PyToDoReact", "JavaScript - CSS - React")
-PROJECT_FLAPPY_BIRD = Project("Flappy Bird", "flappybird.jpg", "A videogame similar to Flappy Bird, created in Java", "https://github.com/ChurritoDeFlores/Java/tree/main/FlappyBird", "Java")
-PROJECT_CALCULATOR = Project("Calculator", "calculadora.png", "Web application similar to iPhone calculator","https://github.com/ChurritoDeFlores/CalculadoraHTML", "HTML - CSS - JavaScript", "http://churritocalculador.somee.com/")
-PROJECT_TELE_PONG = Project("Tele-Pong", "telepong.png", "TelePong video game made with C# using WinForm", "https://github.com/ChurritoDeFlores/TelePong", "C#")
-PROJECT_MI_PORTAFOLIO = Project("Personal portfolio", "portfolio.png", "This web site created with Reflex", "https://github.com/ChurritoDeFlores/MiPortafolio", "Python")
+PROJECT_API_PYTODO =Project("PyToDo API", "swagger_ui.png", "API for user diary created with FastAPI", "https://github.com/Dingras/PyToDo", "Python")
+PROJECT_APP_PYTODO = Project("PyToDo APP", "PyToDoAPP.png", "APP for user diary created with React", "https://github.com/Dingras/PyToDoReact", "JavaScript - CSS - React")
+PROJECT_FLAPPY_BIRD = Project("Flappy Bird", "flappybird.jpg", "A videogame similar to Flappy Bird, created in Java", "https://github.com/Dingras/Java/tree/main/FlappyBird", "Java")
+PROJECT_CALCULATOR = Project("Calculator", "calculadora.png", "Web application similar to iPhone calculator","https://github.com/Dingras/CalculadoraHTML", "HTML - CSS - JavaScript", "http://churritocalculador.somee.com/")
+PROJECT_TELE_PONG = Project("Tele-Pong", "telepong.png", "TelePong video game made with C# using WinForm", "https://github.com/Dingras/TelePong", "C#")
+PROJECT_MI_PORTAFOLIO = Project("Personal portfolio", "portfolio.png", "This web site created with Reflex", "https://github.com/Dingras/MiPortafolio", "Python")
