@@ -4,9 +4,7 @@ from FerCosentinoDEV.Components.navbar import navbar
 # Vistas
 from FerCosentinoDEV.Views.personal_info import personal_info
 from FerCosentinoDEV.Views.projects import projects
-from FerCosentinoDEV.Views.contact import contact
 #Propiedades de Colores
-from FerCosentinoDEV.Styles.colors import Color
 import FerCosentinoDEV.Styles.styles as Styles
 from FerCosentinoDEV.Styles.styles import LINE_TOP_STYLE
 

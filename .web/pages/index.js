@@ -3,7 +3,7 @@ import { useRouter } from "next/router"
 import { Event, getAllLocalStorageItems, getRefValue, getRefValues, isTrue, preventDefault, refs, spreadArraysOrObjects, uploadFiles, useEventLoop } from "/utils/state"
 import { EventLoopContext, initialEvents, StateContext } from "/utils/context.js"
 import "focus-visible/dist/focus-visible"
-import { Avatar, Box, Button, Card, CardBody, Center, HStack, Image, Link, ListItem, Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay, Spacer, Text, UnorderedList, useColorMode, VStack } from "@chakra-ui/react"
+import { Avatar, Box, Button, Card, CardBody, Center, HStack, Image, Link, ListItem, Spacer, Text, UnorderedList, useColorMode, VStack } from "@chakra-ui/react"
 import Script from "next/script"
 import { DownloadIcon } from "@chakra-ui/icons"
 import NextLink from "next/link"
@@ -14,7 +14,7 @@ import NextHead from "next/head"
 
 
 export default function Component() {
-  const switch_state = useContext(StateContext)
+  const default_state = useContext(StateContext)
   const router = useRouter()
   const { colorMode, toggleColorMode } = useColorMode()
   const focusRef = useRef();
@@ -41,31 +41,6 @@ export default function Component() {
 
   return (
     <Fragment>
-  <Fragment>
-  {isTrue(connectError !== null) ? (
-  <Fragment>
-  <Modal isOpen={connectError !== null}>
-  <ModalOverlay>
-  <ModalContent>
-  <ModalHeader>
-  {`Connection Error`}
-</ModalHeader>
-  <ModalBody>
-  <Text>
-  {`Cannot connect to server: `}
-  {(connectError !== null) ? connectError.message : ''}
-  {`. Check if server is reachable at `}
-  {`http://localhost:8000`}
-</Text>
-</ModalBody>
-</ModalContent>
-</ModalOverlay>
-</Modal>
-</Fragment>
-) : (
-  <Fragment/>
-)}
-</Fragment>
   <VStack>
   <Script strategy={`afterInteractive`}>
   {`document.documentElement.lang='en'`}

@@ -1,14 +1,6 @@
 import reflex as rx
 from FerCosentinoDEV.Styles.colors import Color
 
-class SwitchState(rx.State):
-    checked: bool = False
-
-    def change_check(self, checked: bool):
-        self.checked = checked
-        print("estoy en Change SwitchState: ",checked)
-        Color.change_check(checked)
-        
 def navbar() -> rx.Component:
     return  rx.hstack(
                 rx.image(
@@ -26,11 +18,6 @@ def navbar() -> rx.Component:
                     margin_left="2%",
                     width="81%"
                 ),
-                ##rx.switch(
-                ##    color_scheme = Color.BACKGROUND.value,
-                ##    is_checked=SwitchState.checked,
-                ##    on_change=SwitchState.set_checked, 
-                ##),
                 rx.button(
                     rx.icon(tag="download"),
                     'Download CV',
