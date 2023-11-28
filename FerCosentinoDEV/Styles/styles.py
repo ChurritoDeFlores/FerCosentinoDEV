@@ -16,6 +16,10 @@ BASE_STYLE = {
     "bg" : Color.BACKGROUND.value
 }
 
+STYLESHEETS = [
+    "https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap"
+]
+
 LINE_TOP_STYLE ={
     "width":"100%",
     "height":"83px",
